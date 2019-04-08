@@ -20,6 +20,34 @@
 
 <body>
 
+
+		<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+		<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAH0qvoOwlu4Vmg6s4_L6OBXHlIlirt26k",
+    authDomain: "travel-diary-mapd.firebaseapp.com",
+    databaseURL: "https://travel-diary-mapd.firebaseio.com",
+    projectId: "travel-diary-mapd",
+    storageBucket: "",
+    messagingSenderId: "618580698774"
+  };
+  firebase.initializeApp(config);
+
+  function writeData(){
+  firebase.database().ref("User").set({
+        title: document.getElementById("titleField").value,
+        location: document.getElementById("locationField").value,
+		hotel: document.getElementById("hotelField").value,
+		attraction: document.getElementById("attField").value,
+		description: document.getElementById("desField").value
+  });
+         
+                    }
+
+ 
+</script>
+
 	<!--================ Start Header Menu Area =================-->
 	<header class="header_area">
 		<div class="main_menu">
@@ -66,25 +94,25 @@
 
 	<!--================Contact Area =================-->
 
-	<form action="#">
+
 			Title:<br>
-			<input type="text" name="firstname" value="Type your title here">
+			<input type="text" nam  placeholder="Type your title here" id="titleField">
 			<br>
 			Location:<br>
-			<input type="text" name="lastname" value="Add Location">
+			<input type="text" name="lastname" placeholder="Add Location" id="locationField">
 			<br>
 			Hotel Name:<br>
-			<input type="text" name="hotelname" value=""> 
+			<input type="text" name="hotelname" placeholder="Enter Name of Hotel" id="hotelField"> 
 			<br>
 			Attractions visited:<br>
-			<input type="text" name="lastname" value="">
+			<input type="text" name="lastname" placeholder="Provide Information regarding the Attractions" id="attField">
 			<br>
 			<br>
 			Description visited:<br>
-			<input type="text" name="lastname" value="">
+			<input type="text" name="lastname" placeholder="Description of the entire trip" id="desField">
 			<br>
-			<input type="submit" value="Submit">
-		  </form> 
+			<input type="submit" onclick = "writeData()" value="Submit">
+	
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3">
@@ -125,7 +153,8 @@
 							</div>
 						</div>
 						<div class="col-md-12 text-right">
-							<button type="submit" value="submit" class="primary-btn text-uppercase">Send Message</button>
+							<button type="submit" value="submit"  class="primary-btn text-uppercase">Send Message</button>
+							<p id = "data"></p>
 						</div>
 					</form>
 				</div>
@@ -181,8 +210,8 @@
 		</div>
 	</div>
 	<!--================End Contact Success and Error message Area =================-->
-
-	<!-- Optional JavaScript -->
+<!--
+	 Optional JavaScript 
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -192,7 +221,7 @@
 	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="js/mail-script.js"></script>
-	<script src="js/theme.js"></script>
+	<script src="js/theme.js"></script>-->
 </body>
 
 </html>

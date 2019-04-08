@@ -26,7 +26,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     var userPass = document.getElementById("password_field").value;
 
 
-
+/*
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
         window.alert( "inside error func : ");
 
@@ -38,14 +38,14 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       // ...
     });
-
+*/
   }
 
   function logout(){
     firebase.auth().signOut();
   }
 
-
+/*
 (function ($) {
     "use strict";
 
@@ -99,4 +99,4 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 
-})(jQuery);
+})(jQuery);*/

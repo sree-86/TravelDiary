@@ -13,13 +13,15 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
     <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
 
     <!--================ Start Header Menu Area =================-->
     <header class="header_area">
@@ -117,8 +119,17 @@
     <!--================Blog Categorie Area =================-->
 
     <!--================Blog Area =================-->
-    <section class="blog_area">
+    
+            <div id="main_container" style="display:none;"></div>
+  
+            <button onclick="mainApp.logout();">logout</button>
+        
+            <section class="blog_area">
+    </div>
+    <script src="fireBase.js"></script>
+    <script src="main.js"></script>
         <div class="container">
+                
             <div class="row">
                 <div class="col-lg-8">
                     <div class="blog_left_sidebar">
@@ -441,6 +452,7 @@
             </div>
         </div>
     </section>
+    
     <!--================Blog Area =================-->
 
     <!--================  start footer Area =================-->
@@ -457,7 +469,8 @@
 
 					
 		
-	</footer>
+    </footer>
+
 	<!--================ End footer Area =================-->
 
 	<!-- Optional JavaScript -->

@@ -1,7 +1,7 @@
+/*
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
-      window.alert( "Welcome User1111111 : ");
 
       var user = firebase.auth().currentUser;
 
@@ -25,10 +25,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     var userEmail = document.getElementById("email_field").value;
     var userPass = document.getElementById("password_field").value;
 
+    window.location = 'blog.html';
 
-/*
     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-        window.alert( "inside error func : ");
+        window.alert( "Invalid E-mail or Password");
 
       // Handle Errors here.
       var errorCode = error.code;
@@ -38,14 +38,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       // ...
     });
-*/
   }
 
   function logout(){
     firebase.auth().signOut();
   }
 
-/*
+
 (function ($) {
     "use strict";
 
@@ -100,3 +99,34 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 })(jQuery);*/
+
+var mainApp = {};
+(function(){
+var mainContainer = document.getElementById("main_container");
+
+    var logtout =  function(){
+        firebase.auth().signOut().then(function(){
+            console.log('success');
+            window.location.replace("login.html");
+        },function(){})
+    }
+
+var init = function(){
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          console.log("stay");
+          mainContainer.style.display = "";
+        } else {
+          // No user is signed in.
+          mainContainer.style.display = "none";
+          console.log("redirect");
+          window.location.replace("login.html");
+        }
+      });
+}
+    
+init();
+
+mainApp.logout = logtout;
+})();

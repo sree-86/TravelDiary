@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
 </head>
 
 <body>
@@ -32,10 +34,12 @@
     storageBucket: "",
     messagingSenderId: "618580698774"
   };
-  firebase.initializeApp(config);
+	firebase.initializeApp(config);
+	
+	var user = firebase.auth().currentUser;
 
   function writeData(){
-  firebase.database().ref("User").set({
+  firebase.database().ref('user').set({
         title: document.getElementById("titleField").value,
         location: document.getElementById("locationField").value,
 		hotel: document.getElementById("hotelField").value,
@@ -65,6 +69,12 @@
 
 							</li>
 							<li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item">
+									<div id="main_container" style="display:none;">
+													<a class="nav-link" onclick="mainApp.logout();">Logout</a>
+									</div>
+									<script src="fireBase.js"></script>
+									<script src="main.js"></script></li>
 						</ul>
 					
 					</div>

@@ -39,7 +39,13 @@
 							<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
 
 							</li>
-							<li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item">
+                            <div id="main_container" style="display:none;">
+                                    <a class="nav-link" onclick="mainApp.logout();">Logout</a>
+                            </div>
+                            <script src="fireBase.js"></script>
+                            <script src="main.js"></script></li>
 						</ul>
 					
 					</div>
@@ -120,14 +126,8 @@
 
     <!--================Blog Area =================-->
     
-            <div id="main_container" style="display:none;"></div>
-  
-            <button onclick="mainApp.logout();">logout</button>
-        
-            <section class="blog_area">
-    </div>
-    <script src="fireBase.js"></script>
-    <script src="main.js"></script>
+            
+    <section class="blog_area">
         <div class="container">
                 
             <div class="row">

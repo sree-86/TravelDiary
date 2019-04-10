@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>About Us</title>
+	<title>Home</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
@@ -16,8 +16,13 @@
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -31,7 +36,7 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="trip_details.html">Trip Details</a></li>
 							
 							<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
@@ -62,109 +67,51 @@
 			<div class="container">
 				<div class="banner_content">
 					<div class="page_link">
-							<a href="home.html">Home</a>
 							<a href="trip_details.html">Trip Details</a>
 							<a href="blog.html">Blog</a>
 							<a href="contact.html">Contact</a>
 							<a href="about-us.html">About Us</a>
 							<a href="index.html">Logout</a>
 					</div>
-					<h2>About Us</h2>
+					<h2>Home</h2>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--================End Home Banner Area =================-->
 
-	<!--================ Start About Area =================-->
-	<section class="section_gap about-area">
-		<div class="container">
-			<div class="single-about row">
-				<div class="col-lg-4 col-md-6 no-padding about-left">
-					<div class="about-content">
-						<h1>
-							We Believe <br>
-							that Travel Memories <br>
-							Should Be Shared
-						</h1>
-						<p>
-							This is a Progressive Web App made as a part of MAPD726 Project. 
-							We are students of Centennial College and travel enthusiasts. 
-							This web app aims to help people who love to travel, save their
-							travel memories and share it with the world. It also helps users to 
-							check out new destinations and plan their trip accordingly.
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-8 col-md-6 text-center no-padding about-right">
-					<div class="about-thumb">
-						<img src="img/about-img.jpg" class="img-fluid info-img" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End About Area =================-->
 
-	<!--================ Start CTA Area =================-->
-	<div class="cta-area section_gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5">
-					<h1>Get Ready To Discover
-						Real Adventures</h1>
-					<p>
-						Checkout our blog plage for nearby attractions that may interest you!
-					</p>
-					<a href="blog.html" class="primary-btn">Blog</a>
-				</div>
-				<div class="offset-lg-1 col-lg-6">
-					<img class="cta-img img-fluid" src="img/cta-img.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--================ End CTA Area =================-->
+    <div class="card">
+            <h5 class="card-header" id="title"></h5>
+            <div class="card-body">
+              <h5 class="card-title" id="location"></h5>
+              <p class="card-text" id="text"></p>
+              <a href="trip_details.html" class="btn btn-primary">Add Another Trip</a>
+            </div>
+          </div>
 
-	<!--================Team Area =================-->
-	<section class="team_area section_gap_top">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="col-lg-12">
-					<div class="main_title">
-						<h1>Team Members</h1>
-						<span class="title-widget-bg"></span>
-					</div>
-				</div>
-			</div>
-			<div class="row team_inner">
-				<div class="col-lg-3 col-md-6">
-					<div class="team_item">
-						<div class="team_img">
-							<img class="img-fluid w-100" src="img/team/sl.png" alt="">
-							<div class="hover">
-								<h4>Sherlyn Lobo</h4>
-								<p>Software Engineer</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="team_item">
-						<div class="team_img">
-							<img class="img-fluid w-100" src="img/team/sr.jpg" alt="">
-							<div class="hover">
-								<h4>Sreeram Ramakrishnan</h4>
-								<p>Mobile Application Developer</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</section>
-	<!--================End Team Area =================-->
+    <script>
+			var playersRef = firebase.database().ref("trip");
+
+    playersRef.on("child_added", function(data, prevChildKey) {
+   var newPlayer = data.val();
+   var name = newPlayer.title;
+   var location = newPlayer.location;
+   var des = newPlayer.des;
+   var att = newPlayer.att;
+   var hotel = newPlayer.hotel;
+   console.log(name);
+   console.log(location);
+   //console.log("number: " + newPlayer.hotel);
+   console.log("Previous Player: " + prevChildKey);
+
+   document.getElementById('title').innerHTML = name;
+   document.getElementById('location').innerHTML = location;
+   document.getElementById('text').innerHTML = "My Accommodation: " +hotel+ "<br>Attractions I Visited: " +att+ "<br>Description of Trip: " +des;
+});
+		</script>
+
+
 
 	<!--================ Start Popular Places Area =================-->
 	<section class="popular-places-area section_gap_bottom">

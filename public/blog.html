@@ -12,17 +12,17 @@
 	<link rel="stylesheet" href="vendors/linericon/style.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
-
     <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-       
+
+
     <!--================ Start Header Menu Area =================-->
     <header class="header_area">
 		<div class="main_menu">
@@ -39,7 +39,13 @@
 							<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
 
 							</li>
-							<li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+                            <li class="nav-item">
+                            <div id="main_container" style="display:none;">
+                                    <a class="nav-link" onclick="mainApp.logout();">Logout</a>
+                            </div>
+                            <script src="fireBase.js"></script>
+                            <script src="main.js"></script></li>
 						</ul>
 					
 					</div>
@@ -119,8 +125,11 @@
     <!--================Blog Categorie Area =================-->
 
     <!--================Blog Area =================-->
+    
+            
     <section class="blog_area">
         <div class="container">
+                
             <div class="row">
                 <div class="col-lg-8">
                     <div class="blog_left_sidebar">
@@ -142,7 +151,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-1.jpg" alt="">
+                                    <img src="img/blog/main-blog/RToronto.jpg" alt="">
                                     <div class="blog_details">
                                         <a href="http://maps.google.com/?q=toronto" target="_blank">
                                             <h2>TORONTO TRAVEL GUIDE</h2>
@@ -172,7 +181,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-2.jpg" alt="">
+                                    <img src="img/blog/main-blog/RMarkham.jpg" alt="">
                                     <div class="blog_details">
                                         <a href="http://maps.google.com/?q=markham" target="_blank">
                                             <h2>Things To Do In Markham</h2>
@@ -202,7 +211,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="">
+                                    <img src="img/blog/main-blog/RUxbridge.jpg" alt="">
                                     <div class="blog_details">
                                         <a href="http://maps.google.com/?q=uxbridge" target="_blank">
                                             <h2>Explore the Trails of Uxbridge</h2>
@@ -232,7 +241,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="">
+                                    <img src="img/blog/main-blog/RDowntownTorontojpg.jpg" alt="">
                                     <div class="blog_details">
                                         <a href="http://maps.google.com/?q=downtown toronto" target="_blank">
                                             <h2>25+ Spectacular Things to Do in Downtown Toronto</h2>
@@ -262,7 +271,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="">
+                                    <img src="img/blog/main-blog/RScarBluffs.jpg" alt="">
                                     <div class="blog_details">
                                         <a href="single-blog.html">
                                             <h2>Scarborough</h2>
@@ -443,6 +452,7 @@
             </div>
         </div>
     </section>
+    
     <!--================Blog Area =================-->
 
     <!--================  start footer Area =================-->
@@ -459,7 +469,8 @@
 
 					
 		
-	</footer>
+    </footer>
+
 	<!--================ End footer Area =================-->
 
 	<!-- Optional JavaScript -->

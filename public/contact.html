@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>About Us</title>
+	<title>Contact Us</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
@@ -16,6 +16,8 @@
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -63,65 +65,58 @@
 				<div class="banner_content">
 					<div class="page_link">
 						<a href="index.html">Home</a>
-						<a href="about-us.html">About Us</a>
+						<a href="contact.html">Contact</a>
 					</div>
-					<h2>About Us</h2>
+					<h2>Contact</h2>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--================End Home Banner Area =================-->
+	<div class="container">
+    
+    <div class="wrapper">
+      <div class="company-info">
+        <ul>
+          <li><i class="fa fa-road"></i> Centennial College</li>
+          <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+          <li><i class="fa fa-envelope"></i> msg@traveldiary.com</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Email Us</h3>
+        <div class="alert">Your message has been sent</div>
+        <form id="contactForm">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label>Company</label>
+            <input type="text" name="company" id="company">
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email" id="email" required>
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone" id="phone">
+          </p>
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5" id="message"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
 
-	<!--================ Start About Area =================-->
-	<section class="section_gap about-area">
-		<div class="container">
-			<div class="single-about row">
-				<div class="col-lg-4 col-md-6 no-padding about-left">
-					<div class="about-content">
-						<h1>
-							We Believe <br>
-							that Travel Memories <br>
-							Should Be Shared
-						</h1>
-						<p>
-							This is a Progressive Web App made as a part of MAPD726 Project. 
-							We are students of Centennial College and travel enthusiasts. 
-							This web app aims to help people who love to travel, save their
-							travel memories and share it with the world. It also helps users to 
-							check out new destinations and plan their trip accordingly.
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-8 col-md-6 text-center no-padding about-right">
-					<div class="about-thumb">
-						<img src="img/about-img.jpg" class="img-fluid info-img" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End About Area =================-->
-
-	<!--================ Start CTA Area =================-->
-	<div class="cta-area section_gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5">
-					<h1>Get Ready To Discover
-						Real Adventures</h1>
-					<p>
-						Checkout our blog plage for nearby attractions that may interest you!
-					</p>
-					<a href="blog.html" class="primary-btn">Blog</a>
-				</div>
-				<div class="offset-lg-1 col-lg-6">
-					<img class="cta-img img-fluid" src="img/cta-img.png" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--================ End CTA Area =================-->
-
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="contact.js"></script>
 	<!--================Team Area =================-->
 	<section class="team_area section_gap_top">
 		<div class="container">

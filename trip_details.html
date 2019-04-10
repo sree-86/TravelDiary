@@ -23,34 +23,6 @@
 <body>
 
 
-		<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-		<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAH0qvoOwlu4Vmg6s4_L6OBXHlIlirt26k",
-    authDomain: "travel-diary-mapd.firebaseapp.com",
-    databaseURL: "https://travel-diary-mapd.firebaseio.com",
-    projectId: "travel-diary-mapd",
-    storageBucket: "",
-    messagingSenderId: "618580698774"
-  };
-	firebase.initializeApp(config);
-	
-	var user = firebase.auth().currentUser;
-
-  function writeData(){
-  firebase.database().ref('user').set({
-        title: document.getElementById("titleField").value,
-        location: document.getElementById("locationField").value,
-		hotel: document.getElementById("hotelField").value,
-		attraction: document.getElementById("attField").value,
-		description: document.getElementById("desField").value
-  });
-         
-                    }
-
- 
-</script>
 
 	<!--================ Start Header Menu Area =================-->
 	<header class="header_area">
@@ -104,25 +76,53 @@
 
 	<!--================Contact Area =================-->
 
+	<div class="container">
+    
+			<div class="wrapper">
+				<div class="company-info">
+					<ul>
+						<li><i ></i> Travel Diary</li>
+						<li><i ></i> Your own Travel Journal</li>
+						<li><i ></i> Record Each Memory!</li>
+					</ul>
+				</div>
 
-			Title:<br>
-			<input type="text" nam  placeholder="Type your title here" id="titleField">
-			<br>
-			Location:<br>
-			<input type="text" name="lastname" placeholder="Add Location" id="locationField">
-			<br>
-			Hotel Name:<br>
-			<input type="text" name="hotelname" placeholder="Enter Name of Hotel" id="hotelField"> 
-			<br>
-			Attractions visited:<br>
-			<input type="text" name="lastname" placeholder="Provide Information regarding the Attractions" id="attField">
-			<br>
-			<br>
-			Description visited:<br>
-			<input type="text" name="lastname" placeholder="Description of the entire trip" id="desField">
-			<br>
-			<input type="submit" onclick = "writeData()" value="Submit">
-	
+				<div class="contact">
+						<h3>Enter Your Trip Details</h3>
+						<div class="alert">Your trip has been saved</div>
+						<form id="tripForm">
+								<p>
+										<label>Title</label>
+										<input type="text" name="title" id="title" required>
+		</p>
+		<p>
+				<label>Location</label>
+				<input type="text" name="location" id="location" required>
+</p>
+<p>
+		<label>Hotel Name</label>
+		<input type="text" name="hotel" id="hotel" required>
+</p>
+<p>
+		<label>Attractions Visited</label>
+		<input type="text" name="attractions" id="att" required>
+</p>
+<p class="full">
+		<label>Description of Trip</label>
+		<textarea name="trip" rows="5" id="des" required></textarea>
+</p>
+<p class="full">
+		<button type="submit">Submit</button>
+	</p>
+
+			</form>
+		</div>
+		</div>
+
+			<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="trip.js"></script>
+			
+	<br><br><br>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3">

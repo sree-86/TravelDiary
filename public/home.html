@@ -82,33 +82,39 @@
 
 
     <div class="card">
+
             <h5 class="card-header" id="title"></h5>
             <div class="card-body">
               <h5 class="card-title" id="location"></h5>
               <p class="card-text" id="text"></p>
               <a href="trip_details.html" class="btn btn-primary">Add Another Trip</a>
             </div>
+
+           
+
           </div>
+
+          
 
     <script>
 			var playersRef = firebase.database().ref("trip");
 
-    playersRef.on("child_added", function(data, prevChildKey) {
+    playersRef.on("child_added", function(data) {
+        
    var newPlayer = data.val();
    var name = newPlayer.title;
    var location = newPlayer.location;
    var des = newPlayer.des;
    var att = newPlayer.att;
    var hotel = newPlayer.hotel;
-   console.log(name);
-   console.log(location);
    //console.log("number: " + newPlayer.hotel);
-   console.log("Previous Player: " + prevChildKey);
+   data.forEach(function(data) {
 
-   document.getElementById('title').innerHTML = name;
-   document.getElementById('location').innerHTML = location;
-   document.getElementById('text').innerHTML = "My Accommodation: " +hotel+ "<br>Attractions I Visited: " +att+ "<br>Description of Trip: " +des;
+   document.getElementById('title').innerHTML = "Title of My Trip: " +name;
+   document.getElementById('location').innerHTML = "Location of My Trip: " +location;
+  document.getElementById('text').innerHTML = "My Accommodation: " +hotel+ "<br>Attractions I Visited: " +att+ "<br>Description of Trip: " +des;
 });
+    });
 		</script>
 
 

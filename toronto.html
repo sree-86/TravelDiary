@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>Home</title>
+	<title>Toronto</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
@@ -17,12 +17,12 @@
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+	<link href="http://fonts.googleapis.com/css?family=Corben:bold" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Nobile" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<!-- main css -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="trip_details.html">Trip Details</a></li>
 							
 							<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
@@ -67,53 +67,62 @@
 			<div class="container">
 				<div class="banner_content">
 					<div class="page_link">
+							<a href="home.html">Home</a>
 							<a href="trip_details.html">Trip Details</a>
 							<a href="blog.html">Blog</a>
 							<a href="contact.html">Contact</a>
 							<a href="about-us.html">About Us</a>
 							<a href="index.html">Logout</a>
 					</div>
-					<h2>Home</h2>
+					<h2>Toronto</h2>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--================End Home Banner Area =================-->
+<br>
+<br>
 
-	<div class="card">
+<center><img src="img/blog/main-blog/RToronto.jpg" alt=""></center>
 
-		<h5 class="card-header" id="title"></h5>
-		<div class="card-body">
-			<h5 class="card-title" id="location"></h5>
-			<p class="card-text" id="text"></p>
-			<a href="trip_details.html" class="btn btn-primary">Add Another Trip</a>
-		</div>
+<br>
+<br>
+<center><h1>Toronto </h1></center>
 
-	 
+<p>
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Toronto is filled with sights and attractions that are well worth your time any day of the year, but there are a few that really shine come spring.
+		<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  Everything gets a little easier in the spring, days are (mostly) brighter and people are (generally) happier. This translates into an air of excitement in the city making spring a great time to get out and explore. 
+		<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 Here are ten of the best places to visit in Toronto or add to your warm weather itinerary this season.
+</p>
 
-	</div>
-
-	
+<div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Rate this Location:</b>
+<div class="rating">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span><input type="radio" name="rating" id="str5" value="You Rated: 1"><label for="str5"></label></span>
+		<span><input type="radio" name="rating" id="str4" value="You Rated: 2"><label for="str4"></label></span>
+		<span><input type="radio" name="rating" id="str3" value="You Rated: 3"><label for="str3"></label></span>
+		<span><input type="radio" name="rating" id="str2" value="You Rated: 4"><label for="str2"></label></span>
+		<span><input type="radio" name="rating" id="str1" value="You Rated: 5"><label for="str1"></label></span>
+</div>
+</div>
 
 <script>
-var playersRef = firebase.database().ref("trip");
-playersRef.on("child_added", function(data) {
+$(document).ready(function(){
+  // Check Radio-box
+  $(".rating input:radio").attr("checked", false);
 
-var newPlayer = data.val();
-var name = newPlayer.title;
-var location = newPlayer.location;
-var des = newPlayer.des;
-var att = newPlayer.att;
-var hotel = newPlayer.hotel;
-//console.log("number: " + newPlayer.hotel);
-data.forEach(function(data) {
-document.getElementById('title').innerHTML = "Title of My Trip: " +name;
-document.getElementById('location').innerHTML = "Location of My Trip: " +location;
-document.getElementById('text').innerHTML = "My Accommodation: " +hotel+ "<br>Attractions I Visited: " +att+ "<br>Description of Trip: " +des;
-});
+  $('.rating input').click(function () {
+      $(".rating span").removeClass('checked');
+      $(this).parent().addClass('checked');
+  });
+
+  $('input:radio').change(
+    function(){
+      var userRating = this.value;
+      alert(userRating);
+  }); 
 });
 </script>
-
 
 
 

@@ -80,19 +80,17 @@
 	</section>
 	<!--================End Home Banner Area =================-->
 
+	<button>Get External Content</button>
 
-    <div class="card">
+	<div class="card" id="card" style="width: 18rem;">
+            
+		<div class="card-body" id="body">
+			<h5 class="card-title" id="title"></h5>
+			<p class="card-text" id="text"></p>
+		</div>
 
-            <h5 class="card-header" id="title"></h5>
-            <div class="card-body">
-              <h5 class="card-title" id="location"></h5>
-              <p class="card-text" id="text"></p>
-              <a href="trip_details.html" class="btn btn-primary">Add Another Trip</a>
-            </div>
 
-           
-
-          </div>
+	</div>
 
           
 
@@ -107,13 +105,59 @@
    var des = newPlayer.des;
    var att = newPlayer.att;
    var hotel = newPlayer.hotel;
-   //console.log("number: " + newPlayer.hotel);
-   data.forEach(function(data) {
+   console.log("number: " + newPlayer.hotel);
+	 
+  // data.forEach(function(data) {
 
-   document.getElementById('title').innerHTML = "Title of My Trip: " +name;
+		var j = parseInt(data.val());
+
+		//for(var i=0;i<j;i++){
+
+		$('.card').append('<div class="card" <div class="card-body" id="body"> <h5 class="card-title" id="title">' + name + '</h5> <p class="card-text" id="text">' + location + ' </p> </div> </div>');
+		//}
+
+/*
+   document.getElementById('title').innerHTML = "<h5 class="card-header" id="title"></h5>Title of My Trip: " +name;
    document.getElementById('location').innerHTML = "Location of My Trip: " +location;
   document.getElementById('text').innerHTML = "My Accommodation: " +hotel+ "<br>Attractions I Visited: " +att+ "<br>Description of Trip: " +des;
-});
+		
+		*/
+		$(document).ready(function(){
+   
+	 $("button").click(function(){
+
+		
+		console.log("here");
+
+		
+
+			console.log("inside");
+
+		//$('.card').html('<div class="card" <div class="card-body" id="body"> <h5 class="card-title" id="title">' + name + '</h5> <p class="card-text" id="text">' + location + ' </p> </div> </div>');
+	
+		//$('.card').append('<div class="card" <div class="card-body" id="body"> <h5 class="card-title" id="title">' + name + '</h5> <p class="card-text" id="text">' + location + ' </p> </div> </div>');
+	 
+
+	});
+	});
+	
+
+//});
+/*
+for (var i=0; i<newPlayer.length; i += 1) {
+	console.log("goes in");
+	var name = ' <h5 class="card-header">';
+		name += newPlayer[i].name;
+		name += '</h5> </div>';
+
+
+		       <h5 class="card-header" id="title"></h5>
+            <div class="card-body">
+              <h5 class="card-title" id="location"></h5>
+              <p class="card-text" id="text"></p>
+              <a href="trip_details.html" class="btn btn-primary">Add Another Trip</a>
+            </div>
+}*/
     });
 		</script>
 
